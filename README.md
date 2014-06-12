@@ -11,11 +11,8 @@ hi-res-stopwatch
 ###Create a new stopwatch
 	var stopwatch1 = new Stopwatch()
 
-###Start the stopwatch
-	stopwatch1.start()
+###Start the stopwatch; **set()**
+	stopwatch1.set() //Does not return anything
 
-###Stop the stopwatch
-	var elapsed = stopwatch1.stop()
-	//or
-	stopwatch1.stop()
-	var elapsed = stopwatch1.get() //use get at any time
+###Get the elapsed time; **get()**
+	var elapsed = stopwatch1.get() //Returns a number
