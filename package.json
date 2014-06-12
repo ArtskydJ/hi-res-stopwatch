@@ -1,0 +1,33 @@
+{
+  "name": "hi-res-stopwatch",
+  "version": "0.0.1",
+  "main": "./index.js",
+  "author": {
+    "name": "ArtskydJ",
+    "email": "josephdykstra@gmail.com"
+  },
+  "description": "Simple, high resolution stopwatch for nodeJS. Ideal for benchmark times.",
+  "keywords": [
+    "high resolution",
+    "stopwatch",
+    "node",
+    "benchmark",
+    "nanoseconds"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArtskydJ/hi-res-stopwatch"
+  },
+  "devDependencies": {
+    "tap": "~0.4.8"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tap ./test/*.js"
+  },
+  "dependencies": {
+    "leading-chars": "~0.0.2"
+  }
+}
