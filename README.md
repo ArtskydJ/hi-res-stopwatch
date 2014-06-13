@@ -44,6 +44,8 @@ Time how long it takes for a callback to be called:
 Time how long it takes for a synchronous function to execute:
 
 	var elapsed = require('ns-elapsed')()
+	//synchronous code here
+	console.log( elapsed.get() )
 
 ##License
 
