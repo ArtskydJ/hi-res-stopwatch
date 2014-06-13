@@ -22,6 +22,7 @@ To require the constructor do:
 	var elapsed2 = new Elapsed()
 
 If you only want one timer, you might as well construct it right away.
+
 	var elapsed = require('ns-elapsed')() //constructed
 
 ##Methods
