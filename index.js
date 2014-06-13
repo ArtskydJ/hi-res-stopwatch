@@ -8,7 +8,7 @@ var diffToTime = function(diff) {
 	return parseFloat('' + diff[0] + '.' + leadingZeroes(diff[1]))
 }
 
-module.exports = function Stopwatch() {
+module.exports = function Elapsed() {
 	var startTime = []
 	function set() { startTime = process.hrtime() }
 	function get() { return diffToTime( process.hrtime(startTime) ) }

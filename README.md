@@ -1,18 +1,50 @@
-hi-res-stopwatch
-================
+ns-elapsed
+==========
+
+[![Build Status](https://travis-ci.org/ArtskydJ/ns-elapsed.svg?branch=master)](https://travis-ci.org/ArtskydJ/ns-elapsed)
+
+- [Install](https://github.com/ArtskydJ/ns-elapsed#install)
+- [Require](https://github.com/ArtskydJ/ns-elapsed#require)
+- [Methods](https://github.com/ArtskydJ/ns-elapsed#methods)
+	- [set](https://github.com/ArtskydJ/ns-elapsed#set)
+	- [get](https://github.com/ArtskydJ/ns-elapsed#get)
+- [Examples](https://github.com/ArtskydJ/ns-elapsed#examples)
+- [License](https://github.com/ArtskydJ/ns-elapsed#license)
 
 ##Install
-	npm install hi-res-stopwatch
+	npm install ns-elapsed
 	
 ##Require
-	var Stopwatch = require('hi-res-stopwatch')
+To require the constructor do:
 
-##Use
-###Create a new stopwatch
-	var stopwatch1 = new Stopwatch()
+	var Elapsed = require('ns-elapsed')
+	var elapsed = new Elapsed()
+	var elapsed2 = new Elapsed()
 
-###Start the stopwatch; **set()**
-	stopwatch1.set() //Does not return anything
+If you only want one timer, you might as well construct it right away.
+	var elapsed = require('ns-elapsed')() //constructed
 
-###Get the elapsed time; **get()**
-	var elapsed = stopwatch1.get() //Returns a number
+##Methods
+###set()
+	elapsed1.set() //Does not return anything
+
+###get()
+	elapsed1.get() //Returns number of seconds elapsed, e.g. 13.947172826
+
+##Examples
+Time how long it takes for a callback to be called:
+
+	var Elapsed() = require('ns-elapsed')
+	var elapsed = new Elapsed()
+	elapsed.set()
+	setTimeout(function() {
+		console.log( elapsed.get() )
+	}, 1000)
+
+Time how long it takes for a synchronous function to execute:
+
+	var elapsed = require('ns-elapsed')()
+
+##License
+
+[MIT](http://opensource.org/licenses/MIT)
