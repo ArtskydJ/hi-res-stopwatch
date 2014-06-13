@@ -26,10 +26,14 @@ If you only want one timer, you might as well construct it right away.
 
 ##Methods
 ###set()
-	elapsed1.set() //Does not return anything
+Does not return anything
+
+	elapsed1.set()
 
 ###get()
-	elapsed1.get() //Returns number of seconds elapsed, e.g. 13.947172826
+Returns the number of seconds elapsed. E.g. 13.947172826, (almost 14 seconds.)
+
+	console.log( elapsed1.get() )
 
 ##Examples
 Time how long it takes for a callback to be called:
