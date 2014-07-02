@@ -3,13 +3,13 @@ ns-elapsed
 
 [![Build Status](https://travis-ci.org/ArtskydJ/ns-elapsed.svg?branch=master)](https://travis-ci.org/ArtskydJ/ns-elapsed)
 
-- [Install](https://github.com/ArtskydJ/ns-elapsed#install)
-- [Require](https://github.com/ArtskydJ/ns-elapsed#require)
-- [Methods](https://github.com/ArtskydJ/ns-elapsed#methods)
-	- [set](https://github.com/ArtskydJ/ns-elapsed#set)
-	- [get](https://github.com/ArtskydJ/ns-elapsed#get)
-- [Examples](https://github.com/ArtskydJ/ns-elapsed#examples)
-- [License](https://github.com/ArtskydJ/ns-elapsed#license)
+- [Install](#install)
+- [Require](#require)
+- [Methods](#methods)
+	- [set](#set)
+	- [get](#get)
+- [Examples](#examples)
+- [License](#license)
 
 ##Install
 	npm install ns-elapsed
