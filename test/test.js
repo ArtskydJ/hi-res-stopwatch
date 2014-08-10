@@ -12,11 +12,11 @@ test('test for approximation', function(t) {
 	elapsed1.set()
 	setTimeout(function() {
 		elapsed2.set()
-		t.ok( between(0.89, elapsed1.get(), 0.95), "stopwatch 1 is between 0.89 and 0.94")
-		t.ok( between(0.0, elapsed2.get(), 0.05), "stopwatch 2 is between 0.00 and 0.05")
+		t.ok( between(0.88, elapsed1.get(), 1), "stopwatch 1 is between 0.88 and 1")
+		t.ok( between(0.0, elapsed2.get(), 0.1), "stopwatch 2 is between 0.00 and 0.1")
 		setTimeout(function() {
-			t.ok( between(1.29, elapsed1.get(), 1.35), "stopwatch 1 is between 1.29 and 1.35")
-			t.ok( between(0.39, elapsed2.get(), 0.45), "stopwatch 2 is between 0.39 and 0.45")
+			t.ok( between(1.28, elapsed1.get(), 1.40), "stopwatch 1 is between 1.28 and 1.40")
+			t.ok( between(0.38, elapsed2.get(), 0.50), "stopwatch 2 is between 0.38 and 0.50")
 			t.end()
 		}, 400)
 	}, 900)
