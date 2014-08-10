@@ -29,17 +29,23 @@ var elapsed2 = new Elapsed()
 
 If you only want one timer, you might as well construct it right away.
 
-	var elapsed = require('ns-elapsed')() //constructed
+```js
+var elapsed = require('ns-elapsed')() //constructed
+```
 
 ##Methods
 ###set()
-Does not return anything
+
+Does not return anything.
+
+Automatically called when constructed.
 
 ```js
-elapsed1.set()
+elapsed.set()
 ```
 
 ###get()
+
 Returns the number of seconds elapsed. E.g. 13.947172826, (almost 14 seconds.)
 
 ```js
@@ -47,22 +53,23 @@ console.log( elapsed1.get() ) //should log something like '13.947172826'
 ```
 
 ##Examples
-Time how long it takes for a callback to be called:
+
+Asynchronous example
 
 ```js
 var Elapsed() = require('ns-elapsed')
 var elapsed = new Elapsed()
-elapsed.set()
-setTimeout(function() {
+elapsed.set() //This is superfluous because 'set()' is automatically called when 'elapsed' was constructed.
+setTimeout(function() { //Asynchronous code here
 	console.log( elapsed.get() )
 }, 1000)
 ```
 
-Time how long it takes for a synchronous function to execute:
+Synchronous example:
 
 ```js
 var elapsed = require('ns-elapsed')()
-//synchronous code here
+//Synchronous code here
 console.log( elapsed.get() )
 ```
 
