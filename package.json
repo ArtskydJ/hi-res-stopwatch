@@ -1,6 +1,6 @@
 {
   "name": "ns-elapsed",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./index.js",
   "author": {
     "name": "ArtskydJ",
@@ -11,10 +11,10 @@
     "high resolution",
     "nanoseconds",
     "stopwatch",
-	"elapsed",
+    "elapsed",
     "node",
     "benchmark",
-	"interval"
+    "interval"
   ],
   "repository": {
     "type": "git",
@@ -30,6 +30,6 @@
     "test": "tap ./test/*.js"
   },
   "dependencies": {
-    "leading-chars": "~0.0.2"
+    "leading-chars": "0.0.3"
   }
 }

@@ -1,6 +1,7 @@
 ﻿var LeadingChars = require('leading-chars')
 var leadingZeroes = LeadingChars({
 	len: 9,
+	overall: true,
 	character: '0',
 	leading: true
 })
@@ -10,8 +11,14 @@ var diffToTime = function(diff) {
 
 module.exports = function Elapsed() {
 	var startTime = []
-	function set() { startTime = process.hrtime() }
-	function get() { return diffToTime( process.hrtime(startTime) ) }
+	
+	function set() {
+		startTime = process.hrtime()
+	}
+	function get() {
+		return diffToTime( process.hrtime(startTime) )
+	}
+
 	set()
 	return {
 		set: set,
