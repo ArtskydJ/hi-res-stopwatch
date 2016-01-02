@@ -12,8 +12,8 @@ Asynchronous example
 ```js
 var Elapsed() = require('ns-elapsed')
 var e = new Elapsed()
-e.set() //This is superfluous because 'set()' is automatically called when 'e' was constructed.
-setTimeout(function() { //Asynchronous code here
+e.set() // This is superfluous because 'set()' is automatically called when 'e' was constructed.
+setTimeout(function() { // Asynchronous code here
 	console.log( e.get() )
 }, 1000)
 ```
@@ -22,7 +22,7 @@ Synchronous example:
 
 ```js
 var elapsed = require('ns-elapsed')()
-//Synchronous code here
+// Synchronous code here
 console.log( e.get() )
 ```
 
@@ -34,27 +34,13 @@ var Elapsed = require('ns-elapsed')
 
 ## `var e = new Elapsed()`
 
-- `e.set()`
-- `e.get()`
+#### `e.set()`
 
+Does not return anything. Automatically called upon construction.
 
-### `e.set()`
+#### `var sec = e.get()`
 
-Does not return anything.
-
-Automatically called when constructed.
-
-```js
-e.set()
-```
-
-### `e.get()`
-
-Returns the number of seconds elapsed. E.g. 13.947172826, (almost 14 seconds.)
-
-```js
-console.log( e.get() ) //should log something like '13.947172826'
-```
+Returns the number of seconds elapsed. E.g. `13.947172826`, which is almost 14 seconds.
 
 # install
 
