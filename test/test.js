@@ -1,22 +1,32 @@
-﻿var test = require('tap').test
+﻿var test = require('tape')
 var Elapsed = require('../index.js')
-var elapsed1 = new Elapsed()
-var elapsed2 = new Elapsed()
+var elapsed1 = Elapsed()
+var elapsed2 = Elapsed()
 
-var between = function(x, y, z) {
-	return (x<y && y<z)
-}
-
-test('test for approximation', function(t) {
-	t.plan(4)
+test(function (t) {
+	t.plan(8)
 	elapsed1.set()
 	setTimeout(function() {
 		elapsed2.set()
-		t.ok( between(0.88, elapsed1.get(), 1), "stopwatch 1 is between 0.88 and 1")
-		t.ok( between(0.0, elapsed2.get(), 0.1), "stopwatch 2 is between 0.00 and 0.1")
+
+		var got1 = elapsed1.get()
+		t.ok(got1 > 0.88, got1 + ' is larger than 0.88')
+		t.ok(got1 < 1, got1 + ' is smaller than 1')
+		
+		var got2 = elapsed2.get()
+		t.ok(got2 > 0, got2 + ' is larger than 0')
+		t.ok(got2 < 0.1, got2 + ' is smaller than 0.1')
+
 		setTimeout(function() {
-			t.ok( between(1.28, elapsed1.get(), 1.40), "stopwatch 1 is between 1.28 and 1.40")
-			t.ok( between(0.38, elapsed2.get(), 0.50), "stopwatch 2 is between 0.38 and 0.50")
+
+			var got3 = elapsed1.get()
+			t.ok(got3 > 1.28, got3 + ' is larger than 1.28')
+			t.ok(got3 < 1.4, got3 + ' is smaller than 1.40')
+
+			var got4 = elapsed2.get()
+			t.ok(got4 > 0.38, got4 + ' is larger than 0.38')
+			t.ok(got4 < 0.5, got4 + ' is smaller than 0.50')
+
 			t.end()
 		}, 400)
 	}, 900)
